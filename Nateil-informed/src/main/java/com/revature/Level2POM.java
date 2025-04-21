@@ -53,7 +53,7 @@ public class Level2POM {
         driver.get("C:\\Users\\Tremayne Miller\\Desktop\\Nateil-Informed\\Nateil-informed\\Important Resources\\InFormed\\level-2.html");
     }
 
-    public void submitForm(){
+    public void fillForm(){
 
         wait.until(ExpectedConditions.visibilityOfAllElements(answers));
 
@@ -88,7 +88,7 @@ public class Level2POM {
             driver = new ChromeDriver();
             Level2POM pom = new Level2POM(driver);
             pom.openLevel2();
-            pom.submitForm();
+            pom.fillForm();
             driver.switchTo().alert().accept();
             pom.takeScreenshot();
         } catch (IOException e) {
